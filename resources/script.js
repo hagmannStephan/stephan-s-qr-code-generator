@@ -18,12 +18,17 @@ function generateQRCode(url) {
 
 // Copy QR code to clipboard
 document.getElementById("copyBtn").addEventListener("click", async () => {
-    canvas.toBlob(blob => {
-        const item = new ClipboardItem({ "image/png": blob });
-        navigator.clipboard.write([item]).then(() => {
-            alert("QR Code copied to clipboard!");
-        }).catch(err => console.error("Copy failed", err));
-    });
+    const dataURL = canvas.toDataURL("image/png");
+    const blob = await fetch(dataURL).then(res => res.blob());
+    const item = new ClipboardItem({ "image/png": blob });
+
+    try {
+        await navigator.clipboard.write([item]);
+        alert("QR Code copied to clipboard!");
+    } catch (err) {
+        console.error("Copy failed", err);
+        alert("Failed to copy QR code.");
+    }
 });
 
 // Download QR code as PNG
