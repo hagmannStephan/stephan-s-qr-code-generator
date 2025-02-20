@@ -32,6 +32,12 @@ h1 {
 h2 {
     color: #594ece;
     margin-top: 1vh;
+    margin-bottom: 0vh;
+}
+
+h3 {
+    color: #594ece;
+    margin-top: 1vh;
     margin-bottom: 5vh;
 }
 
