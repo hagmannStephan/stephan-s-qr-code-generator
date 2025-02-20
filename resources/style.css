@@ -19,9 +19,35 @@ body {
     margin: 0;
 }
 
-
 body, button, input, textarea {
     font-family: 'ShantellSans-Regular', sans-serif;
+}
+
+h1 {
+    color: #594ece;
+    margin-top: -10vh;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #594ece;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+
+@keyframes rainbowCycle {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    56% { color: blue; }
+    70% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+#title-span {
+    animation: rainbowCycle 4s linear infinite;
 }
 
 #qrcodeCanvas {
@@ -42,8 +68,8 @@ body, button, input, textarea {
     background-color: #594ece;
     border-color: #c1bded;
     color: #c1bded;
-    border-radius: 2vw;
-    padding: 2vw;
+    border-radius: 1.5vh;
+    padding: 1.5vh;
     cursor: pointer;
     margin: 0 1vw;
 }
