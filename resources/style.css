@@ -1,12 +1,54 @@
+@font-face {
+    font-family: 'ShantellSans-Regular';
+    src: url(font/ShantellSans-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 html {
     background-color: #c490d1;
+    font-family: 'ShantellSans-Regular', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+body, button, input, textarea {
+    font-family: 'ShantellSans-Regular', sans-serif;
+}
+
+#qrcodeCanvas {
+    margin-bottom: 5vh;
+}
+
+#urlInput {
+    padding: 1vw;
+    width: 60vw;
+    background-color: #c1bded;
+    color: #594ece;
+    border-color: #594ece;
+    border-radius: 2vw;
+    margin-bottom: 2vh;
 }
 
 #copyBtn, #downloadBtn {
     background-color: #594ece;
-    border-color: #8c84e8;
-    color: #8c84e8;
+    border-color: #c1bded;
+    color: #c1bded;
     border-radius: 2vw;
-    padding: 3vw;
+    padding: 2vw;
     cursor: pointer;
+    margin: 0 1vw;
+}
+
+img {
+    width: 4vh;
+    height: auto;
 }
