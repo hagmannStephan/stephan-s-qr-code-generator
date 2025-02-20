@@ -27,7 +27,7 @@ document.getElementById("copyBtn").addEventListener("click", async () => {
         alert("QR Code copied to clipboard!");
     } catch (err) {
         console.error("Copy failed", err);
-        alert("Failed to copy QR code.");
+        alert("Failed to copy QR code.", err);
     }
 });
 
