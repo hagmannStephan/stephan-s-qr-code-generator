@@ -1,0 +1,12 @@
+html {
+    background-color: #c490d1;
+}
+
+#copyBtn, #downloadBtn {
+    background-color: #594ece;
+    border-color: #8c84e8;
+    color: #8c84e8;
+    border-radius: 2vw;
+    padding: 3vw;
+    cursor: pointer;
+}

@@ -34,7 +34,13 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
     link.click();
 });
 
-// Generate example QR code on pageload
-document.addEventListener('DOMContentLoaded', () => {
-    generateQRCode('https://example.com');
+// Generate QR code on input change
+let inputField = document.getElementById('urlInput');
+
+inputField.addEventListener('input', function() {
+    generateQRCode(inputField.value);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    generateQRCode(inputField.value);
 });
